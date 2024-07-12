@@ -11,13 +11,13 @@ async function getRestaurants() {
   for (i = 0; i < restaurants.length; i++) {
     restaurantsAttribute = restaurants[i].attributes;
     console.log(restaurantsAttribute);
-    let RestaurantName = restaurantsAttribute.Name;
+    let restaurantName = restaurantsAttribute.Name;
     let restaunrantDescription = restaurantsAttribute.Description;
     let restaurantCreatedAt = restaurantsAttribute.createdAt;
 
     const HTMLData = `
 
-    <h1 s>${RestaurantName}</h1>
+    <h1 s>${restaurantName}</h1>
     <p>${restaunrantDescription}</p>
     <p>${restaurantCreatedAt}</p>
     <hr>

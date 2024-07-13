@@ -1,9 +1,9 @@
 async function getRestaurants() {
   const response = await fetch("http://127.0.0.1:1337/api/restaurants");
   //console.log(response);
-  data = await response.json();
-  //console.log(data);
-  restaurants = data.data;
+  rawData = await response.json();
+  //console.log(rawData);
+  restaurants = rawData.data;
   console.log(restaurants.length);
 
   const restaurantsRow = document.getElementById("restaurants");
@@ -17,7 +17,7 @@ async function getRestaurants() {
 
     const HTMLData = `
 
-    <h1 s>${restaurantName}</h1>
+    <h1>${restaurantName}</h1>
     <p>${restaunrantDescription}</p>
     <p>${restaurantCreatedAt}</p>
     <hr>
